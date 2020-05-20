@@ -98,3 +98,17 @@ rm(producto) #eliminó la función producto que habíamos creado
 
 rm(list = ls()) #eliminó todo lo que habíamos creado hasta el momento
 
+## PARA NÚMEROS COMPLEJOS
+
+z <- 2+3i #es igual que escribir:
+z <- complex(real = 2, imaginary = 3)
+Re(z) #Real de z = 2
+Im(z) #Imaginario de z = 3
+z2 <- complex(real = 2, imaginary = -3) #el z2 lo hacemos con -3 en imaginario
+Conj(z2) #Conjugado de z2 con el -3 de imaginario nos arroja que es 2+3i (con el +3 cambiado)
+
+#la raíz cuadrada de un número negativo no se puede hacer, para eso son los imaginarios
+sqrt(-2) #nos sale un error
+sqrt(as.complex(-5)) #esto sí sale
+
+
