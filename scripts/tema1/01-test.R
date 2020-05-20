@@ -36,3 +36,65 @@ x2 <- pi * 100^(-1:3)
 round(x2, 3)
 signif(x2, 3)
 
+
+sin(pi^4) + cos(pi^4) -> z
+z
+
+pi4 <- pi*4
+pi4
+
+miVariable <- 4
+doble <- function(x){
+  x*2
+}
+doble(miVariable)
+
+## Vamos a crear Función f(x) = x^3 - (3^x) * sen(x)
+f <- function(x){
+  x^3 - (3^x) * sin(x)
+}
+
+# ahora probamos con: qué vale f de 4
+f(4) # En el ejemplo, el profesor puso mal la fórmula
+f(pi/2)
+
+suma1 <- function(t){
+  t + 1
+}
+suma1(8)
+
+## funciones con 2 argumentos:
+producto <- function(x, y){
+  x*y
+}
+producto(8,2)
+
+## ejemplo de suma 5, para ver cómo una función puede tener más de un operador
+suma5 <- function(numero){
+  numero <- suma1(numero);
+  numero <- suma1(numero);
+  numero <- suma1(numero);
+  numero <- suma1(numero);
+  numero <- suma1(numero); # puso ; entre una operación y otra
+  numero # que me devuelva numero
+}
+
+suma5(8) 
+
+## esa función de suma 5 también puede escribirse así:
+suma5 <- function(numero){
+  numero <- suma1(numero);
+  numero <- suma1(numero);
+  numero <- suma1(numero);
+  numero <- suma1(numero);
+  suma1(numero); # que me devuelva la última suma1() de numero
+}
+
+suma5(14) 
+
+ls() #nos ayuda a enlistar todos los elementos que hemos trabajado
+
+rm(producto) #eliminó la función producto que habíamos creado
+
+rm(list = ls()) #eliminó todo lo que habíamos creado hasta el momento
+
